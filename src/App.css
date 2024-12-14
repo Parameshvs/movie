@@ -1,0 +1,94 @@
+
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.movie-list, .watchlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-card, .watchlist-card {
+  position: relative;
+  width: 200px;
+  margin: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: fadeIn 0.8s ease-in-out;
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.movie-card:hover, .watchlist-card:hover {
+  transform: scale(1.15);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  background-color: #f0f0f0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.poster {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.poster:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.title {
+  margin: 10px 0;
+  color: #333;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.title:hover {
+  color: #e50914;
+}
+
+.button, .rating-container {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background: rgba(229, 9, 20, 1);
+  color: #fff;
+}
+
+.rating-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.rating-container label {
+  margin-right: 10px;
+}
+
+.rating-container input {
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
